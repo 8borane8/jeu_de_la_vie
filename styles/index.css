@@ -1,0 +1,238 @@
+body{
+    background: rgb(12,8,19);
+    background: linear-gradient(180deg, rgba(12,8,19,1) 0%, rgba(2,0,36,1) 100%);
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    padding: 30px 0px;
+    width: calc(100% - 150px);
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-around;
+    align-items: center;
+}
+
+header > h1{
+    text-transform: uppercase;
+    color: white;
+    font-size: 15px;
+}
+
+header > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+header > div > a{
+    text-transform: uppercase;
+    font-size: 13px;
+    transition: all 0.15s linear;
+    width: 60px;
+    text-align: center;
+}
+
+header > div > a:hover{
+    opacity: 0.7;
+}
+
+header > div > a.active{
+    color: #9488c7;
+    position: relative;
+}
+
+header > div > a.active::after{
+    content: "";
+    background-color: #9488c7;
+    width: 7px;
+    height: 3px;
+    position: absolute;
+    border-radius: 10px;
+    top: 18px;
+    left: calc(50% - 7px / 2);
+}
+
+header > a{
+    padding: 12px 20px;
+    border-style: solid;
+    border-color: #64626c;
+    border-width: 2px;
+    border-radius: 20px;
+    color: #c8c9cf;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.15s linear;
+    margin-left: calc(117px - 90.8px);
+}
+
+header > a:hover{
+    background-color: #64626c;
+    color: white;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 80px;
+}
+
+main > p:nth-child(1){
+    color: #cfced5;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+main > p:nth-child(2){
+    margin-top: 15px;
+    color: #cfced5;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+main > div{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#button-toogle{
+    padding: 14px 22px;
+    border-radius: 20px;
+    background-color: #6942fc;
+    font-size: 13px;
+    font-weight: 600;
+    color: #d7c0fb;
+    transition: all 0.15s linear;
+    border-style: none;
+    cursor: pointer;
+    width: 120px;
+}
+
+#button-toogle:hover{
+    transform: scale(1.03);
+}
+
+#button-regen{
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #c8c9cf;
+    transition: all 0.15s linear;
+    border-style: solid;
+    border-color: #64626c;
+    border-width: 2px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#button-regen:disabled{
+    cursor: not-allowed;
+}
+
+#button-regen:not(:disabled):hover{
+    background-color: #64626c;
+    color: white;
+}
+
+main > canvas{
+    padding: 5px;
+    margin-top: 100px;
+    margin-bottom: 5px;
+    border-style: solid;
+    border-color: #6942fc;
+    border-width: 2px;
+    border-radius: 8px;
+}
+
+main > p:nth-child(5){
+    margin-bottom: 50px;
+    color: white;
+}
+
+#settings{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 100px;
+}
+
+#settings > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#settings > div > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+#settings > div > div > label{
+    color: white;
+    font-size: 14px;
+}
+
+#settings > div > div > input{
+    width: 200px;
+    outline: none;
+    padding: 5px 8px;
+    border-style: none;
+    border-radius: 5px;
+    appearance: textfield;
+}
+
+#settings > input{
+    margin-top: 10px;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #cfced5;
+    transition: all 0.15s linear;
+    border-style: solid;
+    border-color: #6942fc;
+    border-width: 2px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#settings > input:disabled{
+    cursor: not-allowed;
+}
+
+#settings > input:not(:disabled):hover{
+    background-color: #6942fc;
+    color: white;
+}

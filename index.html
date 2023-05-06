@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Jeu de la vie</title>
+
+        <link rel="stylesheet" href="/styles/reset.css">
+        <link rel="stylesheet" href="/styles/index.css">
+    </head>
+    <body>
+        <header>
+            <h1>Jeu de la vie</h1>
+            <div>
+                <a href="/" class="active">Accueil</a>
+                <a href="/règles.html">Règles</a>
+                <a href="https://fr.wikipedia.org/wiki/Jeu_de_la_vie">WIKI</a>
+            </div>
+            <a href="https://github.com/8borane8/jeu_de_la_vie">Github</a>
+        </header>
+
+        <main>
+            <p>John Horton Conway</p>
+            <p>Bienvenue sur le Jeu de la vie</p>
+            <div>
+                <button id="button-toogle">Démarrer</button>
+                <button id="button-regen">Regénérer</button>
+            </div>
+
+            <canvas width="600" height="600"></canvas>
+            <p>Iteration n°<span id="label-iteration">0</span></p>
+        </main>
+
+        <form id="settings">
+            <div>
+                <div>
+                    <label for="">Largeur Canvas</label>
+                    <input type="number" name="canvas-width" required placeholder="600" value="600" autocomplete="off">
+                </div>
+                <div>
+                    <label for="">Hauteur Canvas</label>
+                    <input type="number" name="canvas-height" required placeholder="600" value="600" autocomplete="off">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="">Nombre de lignes</label>
+                    <input type="number" name="rows" required placeholder="25" value="25" min="4" autocomplete="off">
+                </div>
+                <div>
+                    <label for="">Nombre de colonnes</label>
+                    <input type="number" name="columns" required placeholder="25" value="25" min="4" autocomplete="off">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="">Probabilité</label>
+                    <input type="number" name="probability" required placeholder="30" value="30" min="1" max="99" autocomplete="off">
+                </div>
+                <div>
+                    <label for="">Vitesse (ms)</label>
+                    <input type="number" name="speed" required placeholder="1000" value="1000" min="10" autocomplete="off">
+                </div>
+            </div>
+            <input type="submit" value="Mettre à jour">
+        </section>
+
+        <script type="application/javascript" src="/scripts/index.js"></script>
+    </body>
+</html>
